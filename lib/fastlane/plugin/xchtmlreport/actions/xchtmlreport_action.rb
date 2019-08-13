@@ -11,7 +11,7 @@ module Fastlane
         end
 
         result_bundle_path = params[:result_bundle_path]
-        if result_bundle_path.nil?
+        if result_bundle_path.nil? and not Scan.cache.nil?
           result_bundle_path = Scan.cache[:result_bundle_path]
         end
 
